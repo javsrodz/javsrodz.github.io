@@ -1,0 +1,21 @@
+<app-toolbar></app-toolbar>
+
+<mat-card>
+    <mat-card-content [formGroup]="formLogin">
+        <mat-card-title>
+            Login
+        </mat-card-title>
+        <mat-form-field>
+            <mat-label>Usuario</mat-label>
+            <input matInput formControlName="us" type="email" multiple placeholder="Ingrese su usuario">
+            <span *ngIf="this.formLogin.get('us')?.errors?.['minlength']"></span>
+        </mat-form-field>
+        <mat-form-field>
+            <mat-label>Contraseña</mat-label>
+            <input matInput formControlName="pass" type="password" placeholder="Ingrese su contraseña">
+            <span *ngIf="this.formLogin.get('pass')?.errors?.['minlength']"></span>
+        </mat-form-field>
+    </mat-card-content>
+    <button  mat-raised-button color="primary" [disabled]="this.formLogin.get('pass')?.errors?.['minlength']" (click)="login()">Iniciar</button>
+    <button  mat-raised-button color="warn" (click)="nuevous()">Registrar</button>
+</mat-card>

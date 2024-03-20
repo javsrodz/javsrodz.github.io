@@ -1,0 +1,12 @@
+<mat-toolbar color="primary" class="mat-elevation-z8">
+    <mat-label>Pruebas</mat-label>
+    <span class="example-spacer"></span>
+    <button (click)="home()" mat-button>Home</button>
+    <button (click)="productos()" mat-button>Productos</button>
+    <button (click)="contacto()" *ngIf="sesionactiva == false" routerLink="autocomplete" mat-button>Contactos</button>
+    <button (click)="admin()" *ngIf="sesionactiva == true" mat-button>Dashboard</button>
+    <button (click)="login()" *ngIf="sesionactiva == false" mat-raised-button color="warn" mat-button>Iniciar Sesión</button>
+    <button (click)="logout()" *ngIf="sesionactiva == true" mat-raised-button color="warn" mat-button>
+      <mat-icon>logout</mat-icon>
+    </button>
+  </mat-toolbar>

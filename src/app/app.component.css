@@ -1,0 +1,14 @@
+mat-toolbar{
+    background-color: red;
+    height: 55px;
+
+  }
+h1{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 30px;
+    text-align: center;
+}
+
+.logo{
+    height: 50px;
+}

@@ -1,0 +1,32 @@
+mat-card{
+  display: flex;
+  justify-content: center;
+  height: 300px;
+  width: 500px;
+  margin: 0 auto;
+  position: relative;
+  top: 100px;
+  left: 20px;
+  padding: 20px;
+  border: 2px solid black;
+}
+
+mat-label{
+  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 18px;
+}
+
+mat-card-title{
+  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  text-align: center;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+mat-form-field{
+  display: block;
+}
+
+button{
+  margin-top: 20px;
+}

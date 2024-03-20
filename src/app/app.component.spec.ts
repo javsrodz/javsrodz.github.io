@@ -14,16 +14,16 @@ describe('AppComponent', () => {
     expect(app).toBeTruthy();
   });
 
-  it(`should have as title 'PruebasSistema-master'`, () => {
+  it(`should have as title 'AdmProduccion'`, () => {
     const fixture = TestBed.createComponent(AppComponent);
     const app = fixture.componentInstance;
-    expect(app.title).toEqual('PruebasSistema-master');
+    expect(app.title).toEqual('AdmProduccion');
   });
 
   it('should render title', () => {
     const fixture = TestBed.createComponent(AppComponent);
     fixture.detectChanges();
     const compiled = fixture.nativeElement as HTMLElement;
-    expect(compiled.querySelector('.content span')?.textContent).toContain('PruebasSistema-master app is running!');
+    expect(compiled.querySelector('.content span')?.textContent).toContain('AdmProduccion app is running!');
   });
 });
