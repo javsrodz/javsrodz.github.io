@@ -1,0 +1,10 @@
+{
+    "name": "Angular Dev Container",
+    "image": "node:16",
+    "extensions": [
+        "angular.ng-template",
+        "ms-vscode.vscode-typescript-tslint-plugin"
+    ],
+    "forwardPorts": [4200],
+    "postCreateCommand": "npm install"
+}
