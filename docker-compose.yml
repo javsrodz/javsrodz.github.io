@@ -1,0 +1,35 @@
+version: "3.9"
+
+services:
+  angular:
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile-frontend.yml
+    ports:
+      - "4200:4200"
+    volumes:
+      - ./frontend:/app
+  api:
+    build:
+      context: ./backend
+      dockerfile: Dockerfile-backend.yml
+    ports:
+      - "8080:8080"
+    volumes:
+      - ./backend:/app
+    depends_on:
+      - sqlserver
+  sqlserver:
+    image: "mcr.microsoft.com/mssql/server:2019-latest"
+    environment:
+      SA_PASSWORD: "1234"
+      ACCEPT_EULA: "Y"
+    ports:
+      - "1433:1433"
+    volumes:
+      - .sqlserver:/var/opt/mssql/data
+
+networks:
+  default:
+    external:
+      name: "default"

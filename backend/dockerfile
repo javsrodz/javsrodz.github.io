@@ -1,0 +1,11 @@
+FROM mcr.microsoft.com/dotnet/core/aspnet:6.0
+
+WORKDIR /app
+
+COPY . .
+
+RUN dotnet restore
+
+EXPOSE 80
+
+CMD ["dotnet", "run"]
