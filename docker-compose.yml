@@ -31,5 +31,5 @@ services:
 
 networks:
   default:
-    external:
-      name: "default"
+    name: default
+    external: true
