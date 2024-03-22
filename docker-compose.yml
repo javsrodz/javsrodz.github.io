@@ -14,7 +14,7 @@ services:
       context: ./backend
       dockerfile: Dockerfile-backend.yml
     ports:
-      - "8080:8080"
+      - "7103:7103"
     volumes:
       - ./backend:/app
     depends_on:
