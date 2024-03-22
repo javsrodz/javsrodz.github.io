@@ -8,4 +8,4 @@ RUN dotnet restore
 
 EXPOSE 80
 
-CMD ["dotnet", "run"]
+CMD ["Escuela", "Escuela.dll"]
